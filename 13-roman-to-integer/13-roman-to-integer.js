@@ -14,15 +14,11 @@ var romanToInt = function(s) {
     let answer = 0;
     for(let i =0;s.length>i;i++){
         if(code[s[i]]<code[s[i+1]]){
-  
             answer = answer + code[s[i+1]]-code[s[i]]
             i++
            }else{
             answer = answer+ code[s[i]]
         }
-        console.log("a")
     }
-   
-   
     return answer
 };
