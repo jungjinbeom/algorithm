@@ -13,12 +13,8 @@ var romanToInt = function(s) {
         'M':1000}
     let answer = 0;
     for(let i =0;s.length>i;i++){
-        if(code[s[i]]<code[s[i+1]]){
-            answer = answer + code[s[i+1]]-code[s[i]]
-            i++
-           }else{
-            answer = answer+ code[s[i]]
-        }
+     code[s[i]]<code[s[i+1]] ?  answer -= code[s[i]]:answer+= code[s[i]]
+       
     }
     return answer
 };
