@@ -25,7 +25,7 @@ var generate = function(numRows) {
                 answer.push(result)
             }
         }
-        console.log(answer)
+    
         return answer
     }
     return handlePascal(numRows)
