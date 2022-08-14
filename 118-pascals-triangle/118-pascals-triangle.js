@@ -13,6 +13,7 @@ var generate = function(numRows) {
                 let len = prevArr.length;
                 const result =prevArr.reduce((acc,curr,idx)=>{
                     let nextNum = prevArr[idx+1];
+                    console.log(nextNum)
                     if(!idx){
                         acc.push(curr,nextNum+curr);
                     }else if(len-1 === idx){
