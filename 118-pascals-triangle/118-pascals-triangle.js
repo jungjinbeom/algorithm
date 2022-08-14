@@ -8,9 +8,7 @@ var generate = function(numRows) {
             if(i === 0 || i === 1) {
                 i ? answer.push([1,1]) : answer.push([1])
             }else{   
-                
                 const result =answer[i-1].reduce((acc,curr,idx)=>{                 
-                    let nextNum = answer[i-1][idx+1];
                     if(i-1===idx){
                         acc.push(curr);
                     }else{
