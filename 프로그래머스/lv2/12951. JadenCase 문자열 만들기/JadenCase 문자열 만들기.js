@@ -1,17 +1,12 @@
 function solution(s) {
     const strArr = s.split(" ")
     var answer = [];
-    let letter ="";
-    
-    
-    answer = strArr.reduce((acc,curr,idx)=>{
-        const firstStr = [...curr][0]
+    answer = strArr.reduce((acc,curr)=>{
         let str= ""
-        console.log(firstStr)
+        const firstStr = [...curr][0]
         if(firstStr){
             str = isNaN(firstStr) ? firstStr.toUpperCase() : firstStr 
-            const restStr = curr.slice(1,curr.length).toLowerCase();
-            str += restStr
+            str += curr.slice(1,curr.length).toLowerCase();
             acc.push(str)
         }else{
             acc.push(firstStr)   
