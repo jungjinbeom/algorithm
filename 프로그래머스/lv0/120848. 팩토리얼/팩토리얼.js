@@ -3,16 +3,7 @@ function solution(n) {
     let count = 1;
     for(let i = 1; n>=i; i++){
         count *= i
-        if(count === n){
-            answer = i
-            break;
-        }
-        if(count > n){
-            answer = i-1
-            break;
-        }
-        
+        if(count === n) return i;
+        if(count > n) return i-1;
     }
-    
-    return answer;
 }
