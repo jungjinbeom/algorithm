@@ -20,12 +20,14 @@ function solution(park, routes) {
         N: [-1, 0]
     }
     
-    routes.forEach((route, routeIdx) => {
-        // 방향과 거리 입력받기
+    loop1 :
+    for(let routeIdx = 0; routes.length > routeIdx; routeIdx++){
+        const route = routes[routeIdx];
+        
+         // 방향과 거리 입력받기
         const [pos, range] = route.split(" ")
         let curPos = [...prevPos]
-        let applyFlag = true
-        
+      
         // 거리만큼 반복
         for(let i = 0 ; i < range; i ++) {
             
@@ -40,20 +42,17 @@ function solution(park, routes) {
                     (curPos[1] < 0)
     )
             {
-                applyFlag = false
-                break
+               continue loop1;
             }
             
             if(map[curPos[0]][curPos[1]] === 'X') {
-                applyFlag = false
-                break
-            }
-            
+                continue loop1;
+            }   
         }
-        
-        if(applyFlag) prevPos = curPos
+
+        prevPos = curPos
     
-    })
+    }
     
     
     // 문제가 없다면 이 변수에 반영되도록
