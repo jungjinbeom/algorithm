@@ -6,15 +6,15 @@ const [a,b,c] = input;
 let result = 0
 let result2 = 0
 
-if(a===b){
+if(a<=b && a<=c){
    result += 1
 }else{
-    result += 0
+   result += 0
 }
 
-if(a===c){
-    result2+=1
+if(a===c && a===b){
+   result2+=1
 }else{
-    result2+=0
+   result2+=0
 }
 console.log(result, result2)
