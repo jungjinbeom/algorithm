@@ -2,8 +2,10 @@ const fs = require('fs');
 
 let input = fs.readFileSync(0).toString().split('\n');
 
-const [a,rest] = input
-const [b,c,d,e] = rest.split(' ');
+let [a,rest] = input
+a=Number(a);
+
+const [b,c,d,e] = rest.split(' ').map(Number);
 
 if(a>b){
     console.log(1)
