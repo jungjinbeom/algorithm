@@ -8,7 +8,7 @@ let result = '';
 
 let i;
 
-for(i = a; b >= i;){
+for(i = a; b > i;){
 
     if(i % 2 !== 0){
         result += i + (" ")
