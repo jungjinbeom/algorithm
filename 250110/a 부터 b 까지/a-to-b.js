@@ -4,23 +4,19 @@ let [a, b] = fs.readFileSync(0).toString().split(' ').map(Number);
 
 
 
-let result = '';
+let result = ''
 
-let i;
-
-for(i = a; b > i;){
-
+let i = a; 
+while(b >= i){ 
+    result += i + (" ");
     if(i % 2 !== 0){
-        result += i + (" ")
-        i *= 2; 
-        
+        i *=  2; 
+        continue;
     }
-
     if(i % 2 === 0){
-        result += i + (" ")
         i += 3;
-        
-    }
+        continue;
+    }    
 }
 
 console.log(result)
