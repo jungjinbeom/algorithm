@@ -21,7 +21,7 @@ for(let i = n; 100>=i; i++){
         continue;
     }
     if(i<60){
-        result += "E" + (' ')
+        result += "F" + (' ')
         continue;
     }    
 }
