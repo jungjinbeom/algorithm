@@ -6,7 +6,7 @@ let sum = 0;
 let r = 0 
 for(let i =1; 100>=i;i++){
     sum += i
-    if(sum>n){
+    if(sum>=n){
         r +=i
         break;
     }
