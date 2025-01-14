@@ -3,17 +3,18 @@ let n = Number(fs.readFileSync(0).toString().trim())
 
 let str = '';
 
-for(let i = 1; n>=i; i++){
+
+for(let i = 0; n>i; i++){
     str = ''
-    for(let j = 0; i>j; j++){
+    for(let j = 0; i>=j; j++){
         str +="* "
     }
     console.log(str)
 }
 
-for(let i = n; i>1; i--){
+for(let i = n-2; i>=0; i--){
     str = ''
-    for(let j = 1; i>j; j++){
+    for(let j = 0; i>=j; j++){
         str+="* "
     }
     console.log(str)
