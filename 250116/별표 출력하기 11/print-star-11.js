@@ -1,17 +1,22 @@
-const fs = require('fs');
+const fs = require('fs')
 
-let n = Number(fs.readFileSync(0).toString().trim());
+let n = fs.readFileSync(0).toString().trim();
+
 
 let str = ''
-
-for(let i =0; n>i;i++){
+for(let i = 1; (n * 2)+1>=i;i++){
     str = ''
-    for(let j = 0; n>j; j++){
-        if(i === 0 || i === n-1 || j === 0 || j === n-1){
-            str+=" *"
+    for(let j = 1; (n * 2)+1>=j;j++){
+        if(i%2 === 0){
+            if(j%2 === 0){
+                str +=' '    
+            }else{
+                str +='*  '
+            }
         }else{
-            str += ' '
+            str +='* '
         }
     }
     console.log(str)
+
 }
