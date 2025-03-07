@@ -3,22 +3,12 @@ const fs = require('fs')
 let n = Number(fs.readFileSync(0).toString().trim());
 
 
-let prev = 1;
-let next = n;
+const arr = [1,n];
 
-let arr = [1,n];
+while(arr[arr.length-1] <= 100){
 
-while(true){
-  const r = prev + next 
+    arr.push(arr[arr.length-2] + arr[arr.length-1]);
 
-    if(r > 100){ 
-        arr.push(r);
-        break;
-    }
-    arr.push(r);
-    prev = next; 
-    next = r
-
-    
 }
+
 console.log(arr.join(' '))
